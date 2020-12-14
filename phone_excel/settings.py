@@ -44,17 +44,17 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
-    #'phone_excel.middlewares.PhoneExcelSpiderMiddleware': 543,
-     'phone_excel.middlewares.PhoneUserAgentMiddleware' : 100,
-}
+#SPIDER_MIDDLEWARES = {
+#    #'phone_excel.middlewares.PhoneExcelSpiderMiddleware': 543,
+#}
 
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
+DOWNLOADER_MIDDLEWARES = {
 #    'phone_excel.middlewares.PhoneExcelDownloaderMiddleware': 543,
-#}
+     'phone_excel.middlewares.PhoneUserAgentMiddleware' : 100,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
